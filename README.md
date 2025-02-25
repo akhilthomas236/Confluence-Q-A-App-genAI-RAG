@@ -29,3 +29,12 @@
   - **Setup**: Install and configure Streamlit.
   - **Interface**: Design a simple and intuitive interface where users can input their queries and receive responses.
   - **Integration**: Connect the Streamlit interface to your Langchain agent to handle user interactions and display responses.
+ 
+### Diagram
+![Workflow](diagram.png)
+
+1. Run `data_extraction.py`: This will sync data from Confluence to PostgreSQL.
+2. Run `data_processing.py`: This will process the data, create embeddings, and save them.
+3. Run `chatbot_interface.py`: This will start the Streamlit interface for user interactions.
+
+You can run them independently and schedule them as needed. For example, you might run the data extraction and processing programs periodically to keep your data up-to-date, while the chatbot interface runs continuously to handle user queries
